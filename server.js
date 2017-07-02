@@ -18,9 +18,9 @@ app.get("/", function(request, response) {
 });
 
 app.get("/user/:id", function(request, response) {
-  var userProfile = data[request.params.id - 1];
-  response.send(userProfile);
-  // response.render("user", { user: userProfile });
+  var userProfile = data.users[request.params.id - 1];
+  // response.send(userProfile);
+  response.render("user", { user: userProfile });
 });
 
 app.listen(port, function() {

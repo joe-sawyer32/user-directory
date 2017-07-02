@@ -13,14 +13,17 @@
     {{#user}}
     <div class="picAndLabels">
         <div class="" <div class="avatarWrapper">
-            <img class="avatarPic" src={{avatar}} alt=name + " Profile Pic">
+          <img class="avatarPic" src={{avatar}} alt=name + " Profile Pic">
         </div>
-        {{#university}}
+        <div class="labels">
+          {{#university}}
             <h4 class="label">University</h4>
-        {{/university}}
-        <h4 class="label">Skills</h4>
+          {{/university}}
+          <h4 class="label">Skills</h4>
+        </div>
     </div>
     <div class="infoBlock">
+      <div class="basicInfo">
         <h1>{{name}}</h1>
         {{#address}}
           {{#city}}
@@ -35,7 +38,15 @@
         {{/job}}
         <h4>{{email}} |</h4>
         <h4> {{phone}}</h4>
-        
+      </div>
+      <div class="eduAndSkills">
+        {{#university}}
+          <h4 class="edu">{{university}}</h4>
+        {{/university}}
+        {{#skills}}
+          <h4 class="skills">{{.}}</h4>
+        {{/skills}}
+      </div>
     </div>
     {{/user}}
 </body>

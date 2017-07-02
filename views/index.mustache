@@ -13,6 +13,7 @@
     <h1>User Directory</h1>
     {{#userList}}
       {{#users}}
+        <a href="./user/{{id}}">
         <div class="userBlock">
           <div class="avatarWrapper">
             <img class="avatarPic" src={{avatar}} alt=name + " Profile Pic">
@@ -24,7 +25,7 @@
           {{^job}}
             <h4 class="available">Available for hire</h4>
           {{/job}}
-        </div>
+        </div> </a>
       {{/users}}
     {{/userList}}
 </body>
